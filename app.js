@@ -19,7 +19,7 @@ async function testDb() {
     //connect to db, create db if doesnt exist
     try {
         await mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true, dbName: dbModel.dbName });
-        console.log("Connection to mongodb local host succesful.");
+        console.log("Connection to mongodb local host successful.");
         //close connection after test
         // mongoose.connection.close();
     } catch (err) {
@@ -71,7 +71,6 @@ app.route("/articles")
         }
     });
 
-
 ////////////////////////handle calls to specific article/////////////////////////////
 app.route("/articles/:articleName")
     //get a specific article
@@ -90,6 +89,51 @@ app.route("/articles/:articleName")
             }
         }
         catch (err) {
+            console.log(err);
+            res.send(err);
+        }
+    })
+    //update a specific article
+    .put(async (req, res) => {
+        //find article in url params and replace fields (retains same _id)
+        try {
+            await dbModel.Article.replaceOne(
+                { name: req.params.articleName },
+                { name: req.body.name, content: req.body.content }
+            );
+            console.log("Updated article successfully.");
+            res.send("Updated article successfully.");
+        } catch (err) {
+            console.log(err);
+            res.send(err);
+        }
+    })
+    //update the field of a specific title
+    .patch(async (req, res) => {
+        try {
+            const response = await dbModel.Article.updateOne(
+                { name: req.params.articleName },
+                { $set: req.body }//if one of the fields is not specified in the request, the json object sent doesnt include it
+            );
+            //tapping into the matchedCount property of the response
+            if (response.matchedCount > 0) {
+                res.send("updated document successfully");
+            } else {
+                res.send("no document found matching that name");
+            }
+        } catch (err) {
+            console.log(err)
+            res.send(err)
+        }
+    })
+    //delete a document from the collection matching the name in the url parameter
+    .delete(async (req, res) => {
+        try {
+            await dbModel.Article.deleteOne(
+                { name: req.params.articleName }
+            );
+            res.send("deleted article successfully.")
+        } catch (err) {
             console.log(err);
             res.send(err);
         }
