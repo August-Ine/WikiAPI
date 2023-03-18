@@ -44,7 +44,7 @@ An article has the following properties:
 - MongoDB: a document-oriented NoSQL database that provides a flexible and scalable way to store and manage data.
 - Mongoose: an Object Data Modeling (ODM) library for MongoDB that provides a schema-based solution to model application data.
 
-## Contributing(#section-6)
+## Contributing (#section-6)
 Contributions are welcome! If you have any improvements or bug fixes, feel free to submit a pull request.
 
 ## Author
