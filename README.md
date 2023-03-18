@@ -1,7 +1,7 @@
 # WikiAPI
 This is a RESTful API built using Node.js, Express, MongoDB, and Mongoose that serves up articles with a name and content
 
-## Toc
+## Toc <a name="table-of-contents"/>
 - [Installation](#installation)
 - [Usage](#usage)
 - [Endpoints](#endpoints)
@@ -9,18 +9,18 @@ This is a RESTful API built using Node.js, Express, MongoDB, and Mongoose that s
 - [Technologies used](#technologies-used)
 - [Contributing](#contributing)
 
-## Installation {#installation}
+## Installation <a name="installation"/>
 To run this project on your local machine, follow these steps:
 -Clone this repository: 'git clone https://github.com/August269/WikiAPI.git'
 -Navigate into the project directory: 'cd WikiAPI'
 -Install the dependencies: 'npm install'
 You will also need to have MongoDB installed on your machine.
 
-## Usage (#usage)
+## Usage <a name="usage"/>
 To start the server, run the following command in the project directory: 'npm start'
 By default, the server will run on 'http://localhost:3000'.
 
-## Endpoints (#endpoints)
+## Endpoints (#endpoints) <a name="endpoints"/>
 | Method | Endpoint | Description |
 |------------------|------------------|------------------|
 | GET   | '/articles'   | Get all articles   |
@@ -31,21 +31,24 @@ By default, the server will run on 'http://localhost:3000'.
 | PATCH   | '/articles/<article-name>'   | Update a field of a specific document   |
 | DELETE   | '/articles/<article-name>'   | Delete a specific article by NAME   |
 
-## Data model (#data-model)
+## Data model <a name="data-model"/>
 An article has the following properties:
 | Property | Type | Description |
 |------------------|------------------|------------------|
 | 'name'   | String   | The name of the article   |
 | 'content'   | String   | The content of the article   |
 
-## Technologies used (#technologies-used)
+## Technologies used <a name="technologies-used"/>
 - Node.js: a server-side JavaScript runtime environment
 - Express.js: a web framework for Node.js
 - MongoDB: a document-oriented NoSQL database that provides a flexible and scalable way to store and manage data.
 - Mongoose: an Object Data Modeling (ODM) library for MongoDB that provides a schema-based solution to model application data.
 
-## Contributing (#contributing)
+## Contributing <a name="contributing"/>
 Contributions are welcome! If you have any improvements or bug fixes, feel free to submit a pull request.
 
 ## Author
 https://github.com/August269
+  
+[Back to Table of Contents](#table-of-contents)
+
