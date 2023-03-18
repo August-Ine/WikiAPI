@@ -2,12 +2,12 @@
 This is a RESTful API built using Node.js, Express, MongoDB, and Mongoose that serves up articles with a name and content
 
 ## Toc
-- [Installation](#section-1)
-- [Usage](#section-2)
-- [Endpoints](#section-3)
-- [Data model](#section-4)
-- [Technologies used](#section-5)
-- [Contributing](#section-6)
+- [Installation] (#section-1)
+- [Usage] (#section-2)
+- [Endpoints] (#section-3)
+- [Data model] (#section-4)
+- [Technologies used] (#section-5)
+- [Contributing] (#section-6)
 
 ## Installation {#section-1}
 To run this project on your local machine, follow these steps:
@@ -39,6 +39,13 @@ An article has the following properties:
 | 'content'   | String   | The content of the article   |
 
 ## Technologies used {#section-5}
+- Node.js: a server-side JavaScript runtime environment
+- Express.js: a web framework for Node.js
+- MongoDB: a document-oriented NoSQL database that provides a flexible and scalable way to store and manage data.
+- Mongoose: an Object Data Modeling (ODM) library for MongoDB that provides a schema-based solution to model application data.
 
 ## Contributing {#section-6}
 Contributions are welcome! If you have any improvements or bug fixes, feel free to submit a pull request.
+
+##Author
+https://github.com/August269
