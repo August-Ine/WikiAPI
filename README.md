@@ -9,7 +9,7 @@ This is a RESTful API built using Node.js, Express, MongoDB, and Mongoose that s
 - [Technologies used](#technologies-used)
 - [Contributing](#contributing)
 
-## Installation (#installation)
+## Installation {#installation}
 To run this project on your local machine, follow these steps:
 -Clone this repository: 'git clone https://github.com/August269/WikiAPI.git'
 -Navigate into the project directory: 'cd WikiAPI'
